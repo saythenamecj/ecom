@@ -118,3 +118,5 @@ export const pmiconOptions = StyleSheet.create({
       marginHorizontal: 20,
     },
   });
+
+  export const defaultAvatar = 'https://static-00.iconduck.com/assets.00/avatar-default-icon-2048x2048-h6w375ur.png'
