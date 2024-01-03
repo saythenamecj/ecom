@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import {
   colors,
@@ -11,14 +11,15 @@ import {
 import { Button, TextInput } from "react-native-paper";
 import Footer from "../components/Footer";
 
-const Login = ({ navigation }) => {
+const ForgetPassword = ({ navigation }) => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
   const loading = false;
 
   const submitHandler = () => {
-    alert("Login success!");
+    alert("Email sent.");
+    // will remove this in the future;
+    navigation.navigate("verify");
   };
 
   return (
@@ -30,7 +31,7 @@ const Login = ({ navigation }) => {
           }}
         >
           <View style={formHeading}>
-            <Text style={styles.LoginStyle}>Login</Text>
+            <Text style={styles.LoginStyle}>Get OTP</Text>
           </View>
         </View>
 
@@ -42,38 +43,24 @@ const Login = ({ navigation }) => {
             keyboardType="email-address"
             onChangeText={setEmail}
           />
-          <TextInput
-            {...inputOptions}
-            placeholder="Password"
-            value={password}
-            secureTextEntry={true}
-            onChangeText={setPassword}
-          />
-
-          <TouchableOpacity
-            activeOpacity={0.8}
-            onPress={() => navigation.navigate("forgetpassword")}
-          >
-            <Text style={styles.forgettext}>Forget Password?</Text>
-          </TouchableOpacity>
 
           <Button
             loading={loading}
             textColor={colors.color1}
-            disabled={email === "" || password === ""}
+            disabled={email === ""}
             style={styles.btn}
             onPress={submitHandler}
           >
-            Log In
+            Confirm Email
           </Button>
 
           <Text style={styles.or}>OR</Text>
 
           <TouchableOpacity
             activeOpacity={0.8}
-            onPress={() => navigation.navigate("signup")}
+            onPress={() => navigation.navigate("login")}
           >
-            <Text style={styles.link}>Sign Up</Text>
+            <Text style={styles.link}>Log In</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -82,4 +69,4 @@ const Login = ({ navigation }) => {
   );
 };
 
-export default Login;
+export default ForgetPassword;

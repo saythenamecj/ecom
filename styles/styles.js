@@ -58,3 +58,63 @@ export const pmiconOptions = StyleSheet.create({
       width: 25,
     
   });
+
+  export const formHeading = {
+    marginTop: 70,
+
+    borderRadius: 7,
+    backgroundColor: colors.color2,
+    color: colors.color4,
+    padding: 5,
+  };
+
+  export const inputOptions = {
+    style: inputStyling,
+    model: "outlined",
+    activeOutlineColor: colors.color3,
+  };
+
+  export const formStyles = StyleSheet.create({
+    LoginStyle: {
+      fontSize: 25,
+      fontWeight: "700",
+      textAlign: "center",
+      color: colors.color4,
+    },
+    container: {
+      flex: 1,
+      padding: 20,
+      backgroundColor: colors.color2,
+      color: colors.color4,
+      borderRadius: 10,
+      justifyContent: "center",
+      elevation: 10,
+    },
+    forgettext: {
+      color: colors.color4,
+      marginHorizontal: 20,
+      marginVertical: 10,
+      alignSelf: "flex-end",
+      fontWeight: "100",
+    },
+  
+    btn: {
+      backgroundColor: colors.color3,
+      margin: 20,
+      padding: 10,
+    },
+    or: {
+      alignSelf: "center",
+      fontSize: 20,
+      fontWeight: "100",
+      color: colors.color4,
+    },
+    link: {
+      color: colors.color4,
+      alignSelf: "center",
+      fontSize: 18,
+      textTransform: "uppercase",
+      marginVertical: 10,
+      marginHorizontal: 20,
+    },
+  });
